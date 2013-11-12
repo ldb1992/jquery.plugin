@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="jq.js"></script>
+    <script src="drag.plugin.min.js"></script>
+    <style type="text/css">
+    .wrapper {
+        height: 300px;
+        width: 500px;
+        margin: 0 auto;
+        outline: black 1px solid;
+        overflow: hidden;
+        position: relative;
+    }
+    #dragElem {
+        -webkit-user-select: none;
+        width:100px;
+        height:100px;
+        background-color: grey
+    }
+    #dragElem:hover {
+        box-shadow: 0px 0px 20px steelblue;
+    }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="dragElem"></div>
+    </div>
+</body>
+<script type="text/javascript">
+$(function() {
+    $('#dragElem').drag({
+        gpu: true,
+        rAF: true
+    });
+})
+</script>
+
+</html>
