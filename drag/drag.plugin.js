@@ -53,7 +53,7 @@ $(function() {
         //     opt.gpu = false;
         // }
 
-        return isOverFlow()
+        return isOverFlow();
     }
 
     function startDrag(evt) {
